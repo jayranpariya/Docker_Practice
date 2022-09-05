@@ -46,6 +46,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>helllo jay</h1>
       <MovieForm onAddMovie={handleAddMovie} />
       {error && (
         <p role="alert" className="Error">

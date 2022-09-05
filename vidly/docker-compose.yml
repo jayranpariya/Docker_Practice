@@ -6,7 +6,8 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./frontend:/app
+      - D:\devops\Docker_Practice\vidly\frontend:/app
+      - /app/node_modules
   api:
     build: ./backend
     ports:
@@ -14,7 +15,8 @@ services:
     environment:
       DB_URL: mongodb://db/vidly
     volumes:
-      - ./backend:/app
+      - D:\devops\Docker_Practice\vidly\backend:/app
+      - /app/node_modules
     command: ./docker-entrypoint.sh
   db:
     image: mongo:4.0-xenial
